@@ -12,33 +12,26 @@ import java.util.ArrayList;
  *
  * @author admin
  */
-public class Squad implements Deployable{
+public class Squad extends Deployable{
 
     private ArrayList<Deployable> soldiers;
 
     public Squad() 
     {
+        super(0);
         soldiers = new ArrayList<>();
-    }
-    
-    @Override
-    public int getStrength() {
-        int str = 0;
-        for(Deployable soldier : soldiers)
-        {
-            str += soldier.getStrength();
-        }
-        return str;
     }
     
     public void add(Deployable soldier)
     {
         soldiers.add(soldier);
+        str += soldier.getStrength();
     }
     
     public void remove(Deployable soldier)
     {
         soldiers.remove(soldier);
+        str -= soldier.getStrength();
     }
     
 }

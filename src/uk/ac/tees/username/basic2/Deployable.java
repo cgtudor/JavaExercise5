@@ -11,6 +11,21 @@ import uk.ac.tees.username.basic1.*;
  *
  * @author admin
  */
-public interface Deployable {
-    public int getStrength();
+public abstract class Deployable {
+    
+    protected int str;
+
+    public Deployable(int str) {
+        this.str = str;
+    }
+    
+    public int getStrength()
+    {
+        return str;
+    }
+    
+    public boolean attack(Deployable sold)
+    {
+        return str >= sold.getStrength();
+    }
 }

@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uk.ac.tees.username.basic2;
-
-import uk.ac.tees.username.basic1.*;
+package uk.ac.tees.username.standard;
 
 /**
  *
  * @author admin
  */
-public class Soldier extends Deployable{
-
-    public Soldier() 
-    {
-        super(1);
-    }
+public interface Vehicle {
     
 }

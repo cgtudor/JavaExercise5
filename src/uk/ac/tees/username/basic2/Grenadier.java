@@ -11,11 +11,13 @@ import uk.ac.tees.username.basic1.*;
  *
  * @author admin
  */
-public class Soldier extends Deployable{
+public class Grenadier extends Deployable{
 
-    public Soldier() 
+
+    public Grenadier() 
     {
-        super(1);
+       super(3);
     }
+   
     
 }
