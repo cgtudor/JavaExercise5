@@ -9,29 +9,29 @@ package uk.ac.tees.username.standard;
  *
  * @author admin
  */
-public class EF747 implements Plane{
-    String origin, destination;
-    int pc;
+public class VehicleAdapter implements Plane{
 
-    public EF747(String origin, String destination, int pc) {
-        this.origin = origin;
-        this.destination = destination;
-        this.pc = pc;
+    Vehicle vehicle;
+
+    public VehicleAdapter(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
-
+    
+    
+    
     @Override
     public String getDestination() {
-        return destination;
+        return vehicle.getPlan().substring(vehicle.getPlan().indexOf('-') + 1).toLowerCase();
     }
 
     @Override
     public String getOrigin() {
-        return origin;
+        return vehicle.getPlan().substring(0, vehicle.getPlan().indexOf('-')).toLowerCase();
     }
 
     @Override
     public int getPassengerCount() {
-        return pc;
+        return vehicle.getCapacity() - vehicle.getEmpty();
     }
     
 }

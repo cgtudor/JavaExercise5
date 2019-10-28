@@ -10,5 +10,7 @@ package uk.ac.tees.username.standard;
  * @author admin
  */
 public interface Vehicle {
-    
+    public String getPlan();
+    public int getCapacity();
+    public int getEmpty();
 }

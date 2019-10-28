@@ -11,4 +11,7 @@ package uk.ac.tees.username.standard;
  */
 public interface Plane {
     
+    public String getDestination();
+    public String getOrigin();
+    public int getPassengerCount();
 }
